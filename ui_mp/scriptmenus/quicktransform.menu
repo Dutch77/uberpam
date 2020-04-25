@@ -1,0 +1,566 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_QUICKMESSAGETAB		32 224
+#define ORIGIN_QUICKMESSAGEWINDOW	32 256
+
+{
+	menuDef
+	{
+		name			"quicktransform"
+		fullscreen		0
+		rect			0 0 640 480
+		focuscolor		1 1 1 1
+		disablecolor	0 0 0 0
+ 		style			WINDOW_STYLE_EMPTY
+
+		onOpen
+		{
+			setDvar cl_bypassMouseInput "1"
+		}
+		onClose
+		{
+			setDvar cl_bypassMouseInput "0"
+		}
+
+// WINDOW BACKGROUND
+		itemDef
+		{
+			name			"window_background"
+			visible			1
+			rect			0 0 324 304
+			origin			32 150 0 0
+	 		style			WINDOW_STYLE_FILLED
+			forecolor		1 1 1 1
+			backcolor		0 0 0 0.7975
+			decoration
+		}
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 20 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"1. Plane"
+			decoration
+		}
+		execKey "1" { scriptMenuResponse "uber__transform__plane"; close quicktransform }
+	
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 36 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"2. Tank"
+			decoration
+		}
+		execKey "2" { scriptMenuResponse "uber__transform__tank"; close quicktransform }
+	
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 52 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"3. Lamp"
+			decoration
+		}
+		execKey "3" { scriptMenuResponse "uber__transform__lamp"; close quicktransform }
+	
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 68 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"4. Crate"
+			decoration
+		}
+		execKey "4" { scriptMenuResponse "uber__transform__crate"; close quicktransform }
+	
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 84 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"5. Potato"
+			decoration
+		}
+		execKey "5" { scriptMenuResponse "uber__transform__potato"; close quicktransform }
+	
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 100 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"6. Grenade"
+			decoration
+		}
+		execKey "6" { scriptMenuResponse "uber__transform__grenade"; close quicktransform }
+	
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 116 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"7. Weapon MP44"
+			decoration
+		}
+		execKey "7" { scriptMenuResponse "uber__transform__weaponmp44"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 132 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"8. Bush"
+			decoration
+		}
+		execKey "8" { scriptMenuResponse "uber__transform__bush"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 148 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"9. Tree"
+			decoration
+		}
+		execKey "9" { scriptMenuResponse "uber__transform__tree"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 164 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"U. Chair"
+			decoration
+		}
+		execKey "u" { scriptMenuResponse "uber__transform__chair"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 180 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"I. Desk"
+			decoration
+		}
+		execKey "i" { scriptMenuResponse "uber__transform__desk"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 196 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"O. Grass"
+			decoration
+		}
+		execKey "o" { scriptMenuResponse "uber__transform__grass"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 212 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"P. Radio"
+			decoration
+		}
+		execKey "p" { scriptMenuResponse "uber__transform__radio"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 228 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"J. Bomb"
+			decoration
+		}
+		execKey "j" { scriptMenuResponse "uber__transform__bomb"; close quicktransform }
+		
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 244 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"K. Deadcow"
+			decoration
+		}
+		execKey "k" { scriptMenuResponse "uber__transform__deadcow"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 260 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24                                       
+			textaligny		8
+			text			"L. Bear"
+			decoration
+		}
+		execKey "l" { scriptMenuResponse "uber__transform__bear"; close quicktransform }
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			160 20 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"B. Car"
+			decoration
+		}
+		execKey "b" { scriptMenuResponse "uber__transform__car"; close quicktransform }
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			160 36 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"N. Bridge"
+			decoration
+		}
+		execKey "n" { scriptMenuResponse "uber__transform__bridge"; close quicktransform }
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
+			visible			1
+			rect			160 52 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"M. Head"
+			decoration
+		}
+		execKey "m" { scriptMenuResponse "uber__transform__head"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 68 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"K. brush_snowbushweed01"
+//			decoration
+//		}
+//		execKey "k" { scriptMenuResponse "uber__transform__brush_snowbushweed01"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 84 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"L. brush_snowbushweed02"
+//			decoration
+//		}
+//		execKey "l" { scriptMenuResponse "uber__transform__brush_snowbushweed02"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 100 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"M. brush_toujanebigbushy"
+//			decoration
+//		}
+//		execKey "m" { scriptMenuResponse "uber__transform__brush_toujanebigbushy"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 116 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"N. caen_bush_full_01"
+//			decoration
+//		}
+//		execKey "n" { scriptMenuResponse "uber__transform__caen_bush_full_01"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 132 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"O. caen_spikeybush_01"
+//			decoration
+//		}
+//		execKey "o" { scriptMenuResponse "uber__transform__caen_spikeybush_01"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 148 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"P. tree_desertbushy"
+//			decoration
+//		}
+//		execKey "p" { scriptMenuResponse "uber__transform__tree_desertbushy"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 164 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"Q. tree_desertpalm01"
+//			decoration
+//		}
+//		execKey "q" { scriptMenuResponse "uber__transform__tree_desertpalm01"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 180 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"R. tree_desertpalm02"
+//			decoration
+//		}
+//		execKey "r" { scriptMenuResponse "uber__transform__tree_desertpalm02"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 196 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"S. tree_destoyed_trunk_a"
+//			decoration
+//		}
+//		execKey "s" { scriptMenuResponse "uber__transform__tree_destoyed_trunk_a"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 212 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"T. tree_destoyed_trunk_b"
+//			decoration
+//		}
+//		execKey "t" { scriptMenuResponse "uber__transform__tree_destoyed_trunk_b"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 228 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"U. tree_destoyed_snow_trunk_a"
+//			decoration
+//		}
+//		execKey "u" { scriptMenuResponse "uber__transform__tree_destoyed_snow_trunk_a"; close quicktransform }
+//
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 244 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"V. tree_destoyed_snow_trunk_b"
+//			decoration
+//		}
+//		execKey "v" { scriptMenuResponse "uber__transform__tree_destoyed_snow_trunk_b"; close quicktransform }
+//
+//		itemDef
+//		{
+//			name			"window"
+//			group			ingamebox
+//			visible			1
+//			rect			160 260 0 0
+//			origin			32 150 0 0
+//			forecolor		1 1 1 1
+//			textfont		UI_FONT_NORMAL
+//			textscale		.24
+//			textaligny		8
+//			text			"X. tree_grey_oak_sm_a"
+//			decoration
+//		}
+//		execKey "x" { scriptMenuResponse "uber__transform__tree_grey_oak_sm_a"; close quicktransform }
+		
+		itemDef
+		{
+			name			"window"
+			visible			1
+			rect			160 276 0 0
+			origin			32 150 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"@QUICKMESSAGE_ESC_EXIT"
+			decoration
+		}
+	}
+}

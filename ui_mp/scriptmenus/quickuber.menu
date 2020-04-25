@@ -1,17 +1,16 @@
 #include "ui_mp/menudef.h"
 
-#define ORIGIN_QUICKMESSAGETAB			32 224
-#define ORIGIN_QUICKMESSAGEWINDOW		32 256
+#define ORIGIN_QUICKMESSAGETAB		32 224
+#define ORIGIN_QUICKMESSAGEWINDOW	32 256
 
 {
 	menuDef
 	{
-		name			"quickmessage"
-		visible			0
+		name			"quickuber"
 		fullscreen		0
 		rect			0 0 640 480
 		focuscolor		1 1 1 1
-		disablecolor		0 0 0 0
+		disablecolor	0 0 0 0
  		style			WINDOW_STYLE_EMPTY
 
 		onOpen
@@ -30,7 +29,7 @@
 			visible			1
 			rect			0 0 224 192
 			origin			ORIGIN_QUICKMESSAGEWINDOW
-			style			WINDOW_STYLE_FILLED
+	 		style			WINDOW_STYLE_FILLED
 			forecolor		1 1 1 1
 			backcolor		0 0 0 0.7975
 			decoration
@@ -111,6 +110,7 @@
 		itemDef
 		{
 			name			"window"
+			group			ingamebox
 			visible			1
 			rect			16 20 0 0
 			origin			ORIGIN_QUICKMESSAGEWINDOW
@@ -118,14 +118,15 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"@QUICKMESSAGE_1_COMMANDS"
+			text			"1. Rampage"
 			decoration
 		}
-		execKey "1" { close quickmessage; open quickcommands }
+		execKey "1" { close quickuber; open quickrampage }
 	
 		itemDef
 		{
 			name			"window"
+			group			ingamebox
 			visible			1
 			rect			16 36 0 0
 			origin			ORIGIN_QUICKMESSAGEWINDOW
@@ -133,14 +134,15 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"@QUICKMESSAGE_2_STATEMENTS"
+			text			"2. Weapons"
 			decoration
 		}
-		execKey "2" { close quickmessage; open quickstatements }
-	
+		execKey "2" { close quickuber; open quickweapon }
+		
 		itemDef
 		{
 			name			"window"
+			group			ingamebox
 			visible			1
 			rect			16 52 0 0
 			origin			ORIGIN_QUICKMESSAGEWINDOW
@@ -148,14 +150,15 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"@QUICKMESSAGE_3_RESPONSES"
+			text			"3. Transform"
 			decoration
 		}
-		execKey "3" { close quickmessage; open quickresponses }
-
+		execKey "3" { close quickuber; open quicktransform }
+	
 		itemDef
 		{
 			name			"window"
+			group			ingamebox
 			visible			1
 			rect			16 68 0 0
 			origin			ORIGIN_QUICKMESSAGEWINDOW
@@ -163,14 +166,31 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"^64. Uber"
+			text			"4. Bomb"
 			decoration
 		}
-		execKey "4" { close quickmessage; open quickuber }
+        execKey "4" { close quickuber; open quickbomb }
 
 		itemDef
 		{
 			name			"window"
+			group			ingamebox
+			visible			1
+			rect			16 84 0 0
+			origin			ORIGIN_QUICKMESSAGEWINDOW
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textaligny		8
+			text			"5. Respawn"
+			decoration
+		}
+        execKey "5" { close quickuber; open quickspawn }
+
+		itemDef
+		{
+			name			"window"
+			group			ingamebox
 			visible			1
 			rect			16 100 0 0
 			origin			ORIGIN_QUICKMESSAGEWINDOW
@@ -178,46 +198,17 @@
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textaligny		8
-			text			"6. Load CVAR & MD5Tool list"
+			text			"6. Teleport"
 			decoration
 		}
-		execKey "6" { close quickmessage; exec "exec ui_mp/pbchecks/pbsvcvar.cfg"; exec "exec ui_mp/pbchecks/pbsvmd5.cfg"; scriptMenuResponse "cvarlistloaded" }
-		
-		itemDef
-		{
-			name			"window"
-			visible			1
-			rect			16 116 0 0
-			origin			ORIGIN_QUICKMESSAGEWINDOW
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.24
-			textaligny		8
-			text			"7. About"
-			decoration
-		}
-		execKey "7" { close quickmessage; scriptMenuResponse "about" }		
+        execKey "6" { close quickuber; open quickteleport }
 
-		itemDef
-		{
-			name			"window"
-			visible			1
-			rect			16 132 0 0
-			origin			ORIGIN_QUICKMESSAGEWINDOW
-			forecolor		1 1 1 1
-			textfont		UI_FONT_NORMAL
-			textscale		.24
-			textaligny		8
-			text			"8. Time-out"
-			decoration
-		}
-		execKey "8" { close quickmessage; scriptMenuResponse "timeout" }
 		
 		itemDef
 		{
 			name			"window"
 			visible			1
-			rect			16 148 0 0
+			rect			16 164 0 0
 			origin			ORIGIN_QUICKMESSAGEWINDOW
 			forecolor		1 1 1 1
 			textfont		UI_FONT_NORMAL
