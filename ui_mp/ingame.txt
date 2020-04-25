@@ -1,0 +1,12 @@
+// ingame menu defs
+// 
+{	
+	loadMenu { "ui_mp/wm_quickmessage.menu" }
+	loadMenu { "ui_mp/scriptmenus/quickuber.menu" }
+	loadMenu { "ui_mp/scriptmenus/quickrampage.menu" }
+	loadMenu { "ui_mp/scriptmenus/quickweapon.menu" }
+	loadMenu { "ui_mp/scriptmenus/quickbomb.menu" }
+	loadMenu { "ui_mp/scriptmenus/quicktransform.menu" }
+	loadMenu { "ui_mp/scriptmenus/quickspawn.menu" }
+	loadMenu { "ui_mp/scriptmenus/quickteleport.menu" }
+}

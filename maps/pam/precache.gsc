@@ -250,4 +250,6 @@ Precache()
 	game["streamauth"] = &"Stream Auth: Set";
 	precacheString(game["streamauth"]);
 	*/
+
+	uber\uber::precacheUberModels();
 }

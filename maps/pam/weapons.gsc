@@ -2,6 +2,18 @@
 
 init()
 {
+    precacheItem("panzerschreck_mp");
+	precacheItem("ppsh_mp");
+	precacheItem("g43_sniper");
+	precacheItem("m1garand_mp");
+    precacheItem("thompson_mp");
+    precacheItem("springfield_mp");
+    precacheItem("shotgun_mp");
+    precacheItem("mp44_mp");
+	precacheItem("kar98k_mp");
+	precacheItem("weapon_frag_grenade_american_mp");
+	precacheItem("weapon_smoke_grenade_german_mp");
+
 	/*ORIGINAL*/
 	switch(game["allies"])
 	{
