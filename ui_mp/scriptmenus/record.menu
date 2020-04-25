@@ -1,0 +1,155 @@
+#include "ui_mp/menudef.h"
+
+#define GLOBAL_TEXTSCALE1	0.25
+
+{
+\\ PASSWORD POPUP MENU \\
+
+menuDef {
+	name				"record"
+	visible 			0
+	fullscreen			0
+	rect				0 0 640 480
+	focuscolor			1 1 1 1
+	popup
+	onESC				{ close record }
+
+	itemDef
+	{
+		name			window
+		group			grpControlbutton
+		rect			70 140 500 130 //280
+		style			WINDOW_STYLE_FILLED
+		border			1
+		bordercolor		1 1 1 .8
+		backcolor		0 0 0 .8
+		visible			1
+		decoration
+	}
+
+	itemDef 
+	{
+		name			window2
+		group			grpControlbutton
+		rect			70 150 500 20 
+		style			WINDOW_STYLE_FILLED
+		border			1
+		bordercolor		.1 .1 .1 .2
+		forecolor		1 1 1 1
+		//backcolor		.3 0.5 0.2 0.5
+		backcolor		1 0 0 0.5
+		visible			1
+		decoration
+	}
+
+	// PASSWORD //
+	itemDef {
+		name			window_title
+		text			"Record Demo"
+		style			0
+		decoration
+		textscale		.3
+		rect			203.5 152 110 20
+		textalign		1
+		textalignx		117
+		textaligny		16
+		forecolor		1 1 1 1
+		visible			1
+	}
+
+	itemDef {
+		name			recordtextEntry
+		group			grpControls
+		TYPE			4
+		text			"Demo name:"
+		dvar			"o_record_text"
+		rect			95 191 450 12	//179
+		maxchars		54
+		maxpaintchars		54
+		textalign		ITEM_ALIGN_LEFT
+		textalignx		3
+		textaligny		11.8
+		textfont		UI_FONT_NORMAL
+		textscale		.250		 
+		forecolor		OPTIONS_CONTROL_FORECOLOR
+		style			WINDOW_STYLE_FILLED
+		backcolor		1 1 1 .3
+		visible			1
+		mouseenter		{ show keyBindStatus; play "mouse_over"; }
+		mouseexit		{ hide keyBindStatus }
+	}
+
+
+	itemDef {
+		name			yes
+		text			"Start Recording"
+		type			ITEM_TYPE_BUTTON
+		textfont		UI_FONT_NORMAL
+		textscale		GLOBAL_TEXTSCALE1
+		textstyle		UI_BUTTON_TEXT_STYLE
+		style			UI_BUTTON_STYLE
+		border			UI_BUTTON_BORDER
+		bordercolor		UI_BUTTON_BORDER_COLOR
+		rect			269 230 100 15
+		textalign		1
+		textalignx		51		// center
+		textaligny		11
+		backcolor		UI_BUTTON_BACK_COLOR
+		forecolor		UI_BUTTON_TEXT_COLOR
+		visible			1
+
+		action {
+			play "mouse_click"
+			exec "vstr o_record_text";
+			close record
+		}
+
+		mouseEnter		{ setitemcolor yes backcolor UI_BUTTON_BACK_COLOR_HOVER;play "mouse_over"; }
+		mouseExit		{ setitemcolor yes backcolor UI_BUTTON_BACK_COLOR }
+	}
+
+		itemDef {
+		name			no
+		text			"Cancel"
+		type			ITEM_TYPE_BUTTON
+		textfont		UI_FONT_NORMAL
+		textscale		GLOBAL_TEXTSCALE1
+		textstyle		UI_BUTTON_TEXT_STYLE
+		style			UI_BUTTON_STYLE
+		border			UI_BUTTON_BORDER
+		bordercolor		UI_BUTTON_BORDER_COLOR
+		rect			269 250 100 15
+		textalign		1
+		textalignx		51		// center
+		textaligny		11
+		backcolor		UI_BUTTON_BACK_COLOR
+		forecolor		UI_BUTTON_TEXT_COLOR
+		visible			1
+
+		action {
+			play "mouse_click"
+			close record
+		}
+
+		mouseEnter		{ setitemcolor yes backcolor UI_BUTTON_BACK_COLOR_HOVER;play "mouse_over"; }
+		mouseExit		{ setitemcolor yes backcolor UI_BUTTON_BACK_COLOR }
+	}
+
+		itemDef {
+		name			window_note
+		text			"Note: Don't remove 'record' in front of the demo name"
+		style			0
+		decoration
+		textscale		.250
+		rect			203.5 170 110 20
+		textalign		1
+		textalignx		117
+		textaligny		16
+		forecolor		1 1 1 1
+		visible			1
+	}
+
+	
+
+}
+}

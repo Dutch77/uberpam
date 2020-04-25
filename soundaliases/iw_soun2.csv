@@ -1,0 +1,5 @@
+name,sequence,probability,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+
+hill400_assault_gr5_letsgoget,,,Voiceovers/US/400Assault/hill400assault_gr5_sc03_01_t1.wav,1,1,,,,1000000,,auto,streamed
+soviet_victory_light01,,,music/downtownsniper_victory_GRFINAL.mp3,1,1,,,,1000000,,auto,streamed
+ridge88_main_music,,,music/88ridge_approaching_ridge2_GRFINAL.mp3,1,1,,,,1000000,,auto,streamed
